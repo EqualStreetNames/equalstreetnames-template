@@ -69,6 +69,12 @@ If you want to replicate the EqualStreetNames project in your city, here is the 
 
 1. Run the website locally (in the root folder of the main repository)
 
+    If you're still in the process of testing, you might need to add it to the `package.json` beforehand.
+
+    ```diff
+    + "serve:my-country:my-city": "parcel serve cities/my-country/my-city/html/index.html cities/my-country/my-city/html/*/index.html --global app --out-dir dist/my-country/my-city"
+    ```
+
     ```bash
     npm install
     npm run serve:my-country:my-city
