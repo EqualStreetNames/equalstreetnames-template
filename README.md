@@ -31,7 +31,8 @@ If you want to replicate the EqualStreetNames project in your city, here is the 
     + ( area["admin_level"="8"]["wikidata"="Q12994"]; )->.a;
     ```
 
-1. Update the HTML files (replace `MyCity` by the name of your city in all the `index.html` files, add languages, ...)
+1. Update the HTML files (replace `MyCity` by the name of your city in all the `index.html` files, add languages, ...). Don't forget to set `app.countries` to the correct value in the `index.html` files.
+Optionally you can change the style using `app.style`, it can be a Mapbox pre-defined style (see [API Reference](https://docs.mapbox.com/mapbox-gl-js/api/#map)) or your custom style (see [Style Specification](https://docs.mapbox.com/mapbox-gl-js/style-spec/))
 
 ## Integrate your city to the project
 
