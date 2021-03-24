@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="../../../../../resources/style.scss">
+    <link rel="stylesheet" href="../../assets/style.css">
+
+    <title>EqualStreetNames.MyCity</title>
+</head>
+
+<body>
+    <div id="loader-wrapper">
+        <div id="loader-title">EqualStreetNames.MyCity</div>
+        <div id="loader"></div>
+        <div id="loader-status">Loading...</div>
+    </div>
+
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <a class="navbar-brand" href="#">EqualStreetNames.MyCity</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" class="btn btn-primary" data-toggle="modal" href="#contact">
+                        <i class="fas fa-envelope"></i>
+                        Contact
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" target="_blank" href="https://github.com/openknowledgebe/equalstreetnames/">
+                        <i class="fab fa-github"></i>
+                        GitHub
+                    </a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button"
+                        aria-haspopup="true" aria-expanded="false">English</a>
+                    <div class="dropdown-menu dropdown-menu-right">
+                        <!-- <a class="dropdown-item" href="../fr/index.html">Français</a> -->
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="flex-fill">
+        <div id="map"></div>
+        <div id="chart-overlay" class="d-none d-sm-block">
+            <div id="gender-chart">
+                <table id="gender-chart-legend" class="table table-borderless table-sm">
+                    <tbody>
+                        <tr class="gender-chart-label" data-gender="m">
+                            <td class="text-center"><i class="fas fa-lg fa-mars"></i></td>
+                            <td>Male (cis)</td>
+                            <td class="text-right gender-chart-count"></td>
+                            <td class="text-right gender-chart-pct"></td>
+                        </tr>
+                        <tr class="gender-chart-label" data-gender="f">
+                            <td class="text-center"><i class="fas fa-lg fa-venus"></i></td>
+                            <td>Female (cis)</td>
+                            <td class="text-right gender-chart-count"></td>
+                            <td class="text-right gender-chart-pct"></td>
+                        </tr>
+                        <tr class="gender-chart-label" data-gender="mx">
+                            <td class="text-center"><i class="fas fa-lg fa-transgender-alt"></i></td>
+                            <td>Male (trans)</td>
+                            <td class="text-right gender-chart-count"></td>
+                            <td class="text-right gender-chart-pct"></td>
+                        </tr>
+                        <tr class="gender-chart-label" data-gender="fx">
+                            <td class="text-center"><i class="fas fa-lg fa-transgender-alt"></i></td>
+                            <td>Female (trans)</td>
+                            <td class="text-right gender-chart-count"></td>
+                            <td class="text-right gender-chart-pct"></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <canvas width="250" height="100"></canvas>
+            </div>
+            <div id="count-information" class="small">
+                Out of <span id="count-total"></span> streetnames, <span id="count-person"></span> have been found to be
+                named after a person.
+            </div>
+    </main>
+
+    <div id="contact" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">
+                        <i class="fas fa-envelope"></i>
+                        Contact
+                    </h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        Interested in replicating EqualStreetNames in another city?<br>
+                        Interested in hosting workshops or organizing a workshop in your municipality?<br>
+                    </p>
+
+                    <p>
+                        Please contact us via
+                    <ul>
+                        <li>
+                            Open Knowledge Belgium:
+                            <a href="mailto:equalstreetnames@openknowledge.be">equalstreetnames@openknowledge.be</a>
+                        </li>
+                    </ul>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../../../../../resources/index.ts"></script>
+    <script>
+        app.countries = "be";
+        app.style = "mapbox://styles/mapbox/dark-v10";
+        app.init();
+    </script>
+    <!-- Fathom - simple website analytics - https://usefathom.com -->
+    <script>
+        (function (f, a, t, h, o, m) {
+            a[h] = a[h] || function () {
+                (a[h].q = a[h].q || []).push(arguments)
+            };
+            o = f.createElement('script'),
+                m = f.getElementsByTagName('script')[0];
+            o.async = 1; o.src = t; o.id = 'fathom-script';
+            m.parentNode.insertBefore(o, m)
+        })(document, window, 'https://cdn.usefathom.com/tracker.js', 'fathom');
+        if (process.env.FATHOM_TOKEN) {
+            fathom('set', 'siteId', process.env.FATHOM_TOKEN);
+            fathom('trackPageview');
+        }
+    </script>
+    <!-- / Fathom -->
+</body>
+
+</html>
