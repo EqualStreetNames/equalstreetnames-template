@@ -1,0 +1,43 @@
+┌────────────────────────┐
+│ openstreetmap (data)   │
+│                        │
+└────────┬───────────────┘
+         │
+         │
+  overpass-relation.php (script)
+  overpass-way.php (script)
+         │
+         │
+         ▼
+  data/overpass/[relation|way]/full.json (file)
+    │                │
+    │                │                      ┌─────────────────────┐
+    │                │                      │  Wikipedia (data)   │
+    │                │                      ├─────────────────────┘
+    │                │──────────────────────┘
+    │                │
+    │        wikidata.php (script)           ┌───────────────────┐
+    │                │                       │ config.php (data) │
+    │                ▼                       ├───────────────────┘
+    │        data/wikidata/*.json (file)     | 
+    │               ├────────────────────────┘
+    │               │
+ geojson.php (script)
+          │
+          │
+          ▼
+geojson files in cities/<city>/data
+       │
+       │                     │
+       │            statistics.php (script)
+       │                     │
+       │                     │
+       |                     ▼
+       │                 gender.csv (file)
+       │                 other.csv (file)
+       ▼                     │
+     THE MAP  ◄──────────────┘
+
+
+Created by https://asciiflow.com/
+files are all data files in this drawing
