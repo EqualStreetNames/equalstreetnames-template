@@ -55,7 +55,7 @@ Optionally you can change the style using `app.style`, it can be a Mapbox pre-de
 
 1. Clone the main repository
 
-    ```bash
+    ```cmd
     git clone https://github.com/EqualStreetNames/equalstreetnames.git
     ```
 
@@ -63,22 +63,41 @@ Optionally you can change the style using `app.style`, it can be a Mapbox pre-de
 
 1. Run the data update (in the root folder of the main repository)
 
-    ```bash
+    ```cmd
     composer install
     composer run update-data -- --city=my-country/my-city
     ```
 
 1. Run the website locally (in the root folder of the main repository)
 
-    If you're still in the process of testing, you might need to add it to the `package.json` beforehand.
+    1. If you're still in the process of testing, you might need to add your city to the `package.json` beforehand.
 
-    ```diff
-    + "serve:my-country:my-city": "parcel serve cities/my-country/my-city/html/index.html cities/my-country/my-city/html/*/index.html --global app --out-dir dist/my-country/my-city"
-    ```
+        In the `"scripts"` section:
 
-    ```bash
-    npm install
-    npm run serve:my-country:my-city
-    ```
+        ```diff
+        + "serve:my-country:my-city": "parcel serve cities/my-country/my-city/html/index.html cities/my-country/my-city/html/*/index.html --global app --out-dir dist/my-country/my-city"
+        ```
+
+        In the `"staticFiles"."staticPath"` section:
+
+        ```diff
+        + {
+        +   "outDirPattern": "**/dist/my-country/my-city",
+        +   "staticPath": "cities/my-country/my-city/data"
+        + }
+        ```
+
+    1. Create a [Mapbox token](https://docs.mapbox.com/help/how-mapbox-works/access-tokens/)
+
+    1. Create a file named `.env` in the root directory of the project
+
+    1. Add the following line to the `.env` file: `MAPBOX_TOKEN=[your Mapbox token]` replacing `[your Mapbox token]` with the token you created
+
+    1. Install JavaScript dependencies and run it
+
+        ```cmd
+        npm install
+        npm run serve:my-country:my-city
+        ```
 
 1. Open <http://localhost:1234/>
