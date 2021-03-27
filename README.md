@@ -75,7 +75,7 @@ Optionally you can change the style using `app.style`, it can be a Mapbox pre-de
         In the `"scripts"` section:
 
         ```diff
-        + "serve:my-country:my-city": "parcel serve \"cities/my-country/my-city/**/index.html\" --global app --out-dir dist/my-country/my-city"
+        + "serve:my-country:my-city": "parcel serve \"cities/my-country/my-city/html/**/index.html\" --global app --out-dir dist/my-country/my-city"
         ```
 
         In the `"staticFiles"."staticPath"` section:
