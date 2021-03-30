@@ -1,9 +1,5 @@
-/**
- * Get all the highway ways in Brussels Region.
- * Filter out bus stops and service highways.
- */
 [out:json][timeout:300];
-( area["admin_level"=""]["wikidata"=""]; )->.a; // Set "admin_level" and "wikidata" to the correct information of your city
+( area["admin_level"=""]["wikidata"=""]; )->.a;
 (
     way["highway"]["name"]["highway"!="bus_stop"]["highway"!="elevator"]["highway"!="platform"]["highway"!="service"](area.a);
     way["place"="square"]["name"](area.a);
