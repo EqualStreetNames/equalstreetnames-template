@@ -3,20 +3,34 @@
 declare(strict_types=1);
 
 return [
+    // Relation ID of the OpenstreetMap City
     'relationId' => 0,
 
+    // Languages in which you want to extract Wiki informations
     'languages' => ['en'],
 
+    // Exclude datas from beeing extracted. Usefull to exclude streets at the edge of the city for example
     'exclude' => [
         'relation' => [],
-        'way' => [],
+        'way' => [
+            /*
+            15221322, // Half Included street
+            */
+        ],
     ],
 
+    // Manualy assign gender to ways/relations (when there are no wikidata page for example)
     'gender' => [
         'relation' => [],
-        'way' => [],
+        'way' => [
+            /*
+            '12121212' => 'F', // Pia Mancini road
+            '13131312' => 'M', // Mister nobody Street
+            */
+        ],
     ],
 
+    // Array that defines what instances of Wikidata are considered "a person". (you can probably leave this as is)
     'instances' => [
         'Q5'        => true,  // human
         'Q2985549'  => true,  // mononymous person
