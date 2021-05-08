@@ -6,15 +6,6 @@ If you want to replicate the EqualStreetNames project in your city, here is the 
 
 1. Click on the "Use this template" button above
 
-1. Find the *OpenStreetMap* relation of your city (example, [Brussels, Belgium](https://www.openstreetmap.org/relation/54094))
-
-1. Add the relation identifier in `config.php` (*example for Brussels, Belgium*)
-
-    ```diff
-    - 'relationId' => 0,
-    + 'relationId' => 54094,
-    ```
-
 1. Update the *Overpass* queries :
 
     `overpass/relation-full-json` (*example for Brussels, Belgium*)
@@ -30,6 +21,36 @@ If you want to replicate the EqualStreetNames project in your city, here is the 
     - ( area["admin_level"=""]["wikidata"=""]; )->.a;
     + ( area["admin_level"="8"]["wikidata"="Q12994"]; )->.a;
     ```
+
+1. Find the *OpenStreetMap* relation of your city (example, [Brussels, Belgium](https://www.openstreetmap.org/relation/54094))
+
+1. Update `config.php` configuration file
+
+    1. **REQUIRED:** Add relation identifier (*example for Brussels, Belgium*).
+
+        ```diff
+        - 'relationId' => 0,
+        + 'relationId' => 54094,
+        ```
+
+    1. *Optional:* Choose languages in which you want to extract Wiki informations with `languages` (English `en` by default).
+
+    1. *Optional:* You can exclude ways or relations by adding the ways identifier in `exclude.way` and adding the relations identifier in `exclude.relation`.
+
+    1. *Optional:* You can manually assign a gender to a way or a relation by adding the ways identifier and its gender in `gender.way` and adding the relations identifier and its gender in `gender.relation`. You can also use `data.csv` file to assign gender (and details) to a way or relation (see below).
+
+    1. *Optional:* You can change the Wikidata instances that will be counted as "a person" with `instances`.
+
+1. You can link information to a relation or way using a `data.csv` CSV file (see [Brussels, Belgium CSV file](https://github.com/EqualStreetNames/equalstreetnames-brussels/blob/master/data.csv))
+
+    Structure:
+
+    - `type`: *OpenStreetMap* object type (relation/way)
+    - `id`: *OpenStreetMap* object identifier
+    - `name`: *OpenStreetMap* street name
+    - `gender`: Gender
+    - `person`: Name of the person
+    - `description`: Description of the person
 
 1. Update the HTML files (replace `MyCity` by the name of your city in **all** `index.html` files, add languages, ...).
 
