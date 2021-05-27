@@ -41,6 +41,15 @@
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button"
+                        aria-haspopup="true" aria-expanded="false">Theme</a>
+                    <div class="dropdown-menu dropdown-menu-right">
+                        <a class="dropdown-item theme-option" id="theme-light" href="#">Light</a>
+                        <a class="dropdown-item theme-option" id="theme-dark" href="#">Dark</a>
+                        <a class="dropdown-item theme-option" id="theme-system" href="#">Follow system</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button"
                         aria-haspopup="true" aria-expanded="false">English</a>
                     <div class="dropdown-menu dropdown-menu-right">
                         <!-- <a class="dropdown-item" href="../fr/index.html">Français</a> -->
@@ -129,11 +138,7 @@
     <script src="../../../website/src/script/index.ts"></script>
     <script>
         app.countries = "";
-        if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
-            app.style = "mapbox://styles/mapbox/dark-v10";
-        } else {
-            app.style = "mapbox://styles/mapbox/light-v10";
-        }
+        app.style = "mapbox://styles/mapbox/dark-v10";
         app.init();
     </script>
 </body>
