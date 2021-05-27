@@ -18,7 +18,7 @@
         <div id="loader-status">Loading...</div>
     </div>
 
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <nav class="navbar navbar-expand-lg fixed-top">
         <a class="navbar-brand" href="#">EqualStreetNames.MyCity</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -129,7 +129,11 @@
     <script src="../../../website/src/script/index.ts"></script>
     <script>
         app.countries = "";
-        app.style = "mapbox://styles/mapbox/dark-v10";
+        if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+            app.style = "mapbox://styles/mapbox/dark-v10";
+        } else {
+            app.style = "mapbox://styles/mapbox/light-v10";
+        }
         app.init();
     </script>
 </body>
