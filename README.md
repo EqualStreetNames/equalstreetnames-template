@@ -89,6 +89,8 @@ If you want to replicate the EqualStreetNames project in your city, here is the 
        If you choose to do so, you stay of course "owner" of the repository, we'll create a team for you (and anyone you want) that will have admin rights on your repository.  
        We'll help you maintain and manage your repository.  
        We'll also setup an automated data update (usually once a week) and automated deployment of the website (if you need it).
+       
+       For the automated deployment, you will need to create a `MAPBOX_TOKEN` in your repository secrets (see [Mapbox documentation](https://docs.mapbox.com/help/how-mapbox-works/access-tokens/)).
 
     1. Keep the ownership of your repository.
 
