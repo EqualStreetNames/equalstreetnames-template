@@ -67,16 +67,13 @@ If you want to replicate the EqualStreetNames project in your city, here is the 
     + <a class="navbar-brand" href="#">EqualStreetNames.Brussels</a>
     ```
 
-1. Don't forget to set `data-countries` attribute to the correct value in **all** `index.html` files.
-
-    (*example for Brussels, Belgium*)
+1. Optionally you can change the style using `data-style` attribute, it can be a Mapbox pre-defined style (see [API Reference](https://docs.mapbox.com/mapbox-gl-js/api/#map)) or your custom style (see [Style Specification](https://docs.mapbox.com/mapbox-gl-js/style-spec/)).
 
     ```diff
-    - <div id="map" data-countries="" data-style="mapbox://styles/mapbox/dark-v10"></div>;
-    + <div id="map" data-countries="be" data-style="mapbox://styles/mapbox/dark-v10"></div>;
+    - <div id="map"></div>;
+    + <div id="map" data-style="mapbox://styles/mapbox/dark-v10"></div>;
     ```
 
-1. Optionally you can change the style using `data-style` attribute, it can be a Mapbox pre-defined style (see [API Reference](https://docs.mapbox.com/mapbox-gl-js/api/#map)) or your custom style (see [Style Specification](https://docs.mapbox.com/mapbox-gl-js/style-spec/)).
 
 ## Integrate your city to the project
 
