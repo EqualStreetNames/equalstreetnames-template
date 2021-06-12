@@ -19,34 +19,35 @@
     </div>
 
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-        <a class="navbar-brand" href="#">EqualStreetNames.MyCity</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+        <div class="container-fluid">
+            <a class="navbar-brand" href="https://equalstreetnames.org/">EqualStreetNames.MyCity</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                    <a class="nav-link" class="btn btn-primary" data-toggle="modal" href="#contact">
-                        <i class="fas fa-envelope"></i>
-                        Contact
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" target="_blank" href="https://github.com/openknowledgebe/equalstreetnames/">
-                        <i class="fab fa-github"></i>
-                        GitHub
-                    </a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button"
-                        aria-haspopup="true" aria-expanded="false">English</a>
-                    <div class="dropdown-menu dropdown-menu-right">
-                        <!-- <a class="dropdown-item" href="../fr/index.html">Français</a> -->
-                    </div>
-                </li>
-            </ul>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" class="btn btn-primary" data-bs-toggle="modal" href="#contact">
+                            <i class="fas fa-envelope"></i>
+                            Contact
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" target="_blank" href="https://github.com/openknowledgebe/equalstreetnames/">
+                            <i class="fab fa-github"></i>
+                            GitHub
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
+                            aria-haspopup="true" aria-expanded="false">English</a>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <!-- <a class="dropdown-item" href="../fr/index.html">Français</a> -->
+                        </div>
+                    </li>
+                </ul>
+            </div>
         </div>
     </nav>
 
@@ -59,26 +60,26 @@
                         <tr class="gender-chart-label" data-gender="m">
                             <td class="text-center"><i class="fas fa-lg fa-mars"></i></td>
                             <td>Male (cis)</td>
-                            <td class="text-right gender-chart-count"></td>
-                            <td class="text-right gender-chart-pct"></td>
+                            <td class="text-end gender-chart-count"></td>
+                            <td class="text-end gender-chart-pct"></td>
                         </tr>
                         <tr class="gender-chart-label" data-gender="f">
                             <td class="text-center"><i class="fas fa-lg fa-venus"></i></td>
                             <td>Female (cis)</td>
-                            <td class="text-right gender-chart-count"></td>
-                            <td class="text-right gender-chart-pct"></td>
+                            <td class="text-end gender-chart-count"></td>
+                            <td class="text-end gender-chart-pct"></td>
                         </tr>
                         <tr class="gender-chart-label" data-gender="mx">
                             <td class="text-center"><i class="fas fa-lg fa-transgender-alt"></i></td>
                             <td>Male (trans)</td>
-                            <td class="text-right gender-chart-count"></td>
-                            <td class="text-right gender-chart-pct"></td>
+                            <td class="text-end gender-chart-count"></td>
+                            <td class="text-end gender-chart-pct"></td>
                         </tr>
                         <tr class="gender-chart-label" data-gender="fx">
                             <td class="text-center"><i class="fas fa-lg fa-transgender-alt"></i></td>
                             <td>Female (trans)</td>
-                            <td class="text-right gender-chart-count"></td>
-                            <td class="text-right gender-chart-pct"></td>
+                            <td class="text-end gender-chart-count"></td>
+                            <td class="text-end gender-chart-pct"></td>
                         </tr>
                     </tbody>
                 </table>
@@ -102,9 +103,7 @@
                         <i class="fas fa-envelope"></i>
                         Contact
                     </h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
                     <p>
