@@ -67,16 +67,16 @@ If you want to replicate the EqualStreetNames project in your city, here is the 
     + <a class="navbar-brand" href="#">EqualStreetNames.Brussels</a>
     ```
 
-1. Don't forget to set `app.countries` to the correct value in **all** `index.html` files.
+1. Don't forget to set `data-countries` attribute to the correct value in **all** `index.html` files.
 
     (*example for Brussels, Belgium*)
 
     ```diff
-    - app.countries = "";
-    + app.countries = "be";
+    - <div id="map" data-countries="" data-style="mapbox://styles/mapbox/dark-v10"></div>;
+    + <div id="map" data-countries="be" data-style="mapbox://styles/mapbox/dark-v10"></div>;
     ```
 
-1. Optionally you can change the style using `app.style`, it can be a Mapbox pre-defined style (see [API Reference](https://docs.mapbox.com/mapbox-gl-js/api/#map)) or your custom style (see [Style Specification](https://docs.mapbox.com/mapbox-gl-js/style-spec/)).
+1. Optionally you can change the style using `data-style` attribute, it can be a Mapbox pre-defined style (see [API Reference](https://docs.mapbox.com/mapbox-gl-js/api/#map)) or your custom style (see [Style Specification](https://docs.mapbox.com/mapbox-gl-js/style-spec/)).
 
 ## Integrate your city to the project
 
@@ -89,7 +89,7 @@ If you want to replicate the EqualStreetNames project in your city, here is the 
        If you choose to do so, you stay of course "owner" of the repository, we'll create a team for you (and anyone you want) that will have admin rights on your repository.  
        We'll help you maintain and manage your repository.  
        We'll also setup an automated data update (usually once a week) and automated deployment of the website (if you need it).
-       
+
        For the automated deployment, you will need to create a `MAPBOX_TOKEN` in your repository secrets (see [Mapbox documentation](https://docs.mapbox.com/help/how-mapbox-works/access-tokens/)).
 
     1. Keep the ownership of your repository.
