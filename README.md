@@ -12,14 +12,14 @@ If you want to replicate the EqualStreetNames project in your city, here is the 
 
     ```diff
     - ( area["admin_level"=""]["wikidata"=""]; )->.a;
-    + ( area["admin_level"="8"]["wikidata"="Q12994"]; )->.a;
+    + ( area["admin_level"="4"]["wikidata"="Q240"]; )->.a;
     ```
 
     `overpass/way-full-json` (*example for Brussels, Belgium*)
 
     ```diff
     - ( area["admin_level"=""]["wikidata"=""]; )->.a;
-    + ( area["admin_level"="8"]["wikidata"="Q12994"]; )->.a;
+    + ( area["admin_level"="4"]["wikidata"="Q240"]; )->.a;
     ```
 
 1. Find the *OpenStreetMap* relation of your city (example, [Brussels, Belgium](https://www.openstreetmap.org/relation/54094))
