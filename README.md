@@ -8,14 +8,14 @@ If you want to replicate the EqualStreetNames project in your city, here is the 
 
 1. Update the *Overpass* queries :
 
-    `overpass/relation-full-json` (*example for Brussels, Belgium*)
+    `overpass/relation-full-json.overpassql` (*example for Brussels, Belgium*)
 
     ```diff
     - ( area["admin_level"=""]["wikidata"=""]; )->.a;
     + ( area["admin_level"="4"]["wikidata"="Q240"]; )->.a;
     ```
 
-    `overpass/way-full-json` (*example for Brussels, Belgium*)
+    `overpass/way-full-json.overpassql` (*example for Brussels, Belgium*)
 
     ```diff
     - ( area["admin_level"=""]["wikidata"=""]; )->.a;
