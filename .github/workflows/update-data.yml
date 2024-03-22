@@ -1,0 +1,26 @@
+name: Update data
+
+on:
+  # Run every month on the 1st at 1:00 UTC
+  schedule:
+    - cron: 
+  workflow_dispatch:
+  push:
+    paths:
+      - ".github/workflows/update-data.yml"
+      - "config.php"
+      - "data.csv"
+      - "overpass/*"
+  pull_request:
+    paths:
+      - ".github/workflows/update-data.yml"
+      - "config.php"
+      - "data.csv"
+      - "overpass/*"
+
+jobs:
+  update-data:
+    uses: EqualStreetNames/equalstreetnames/.github/workflows/reusable-update-date.yml@master
+    secrets: inherit
+    with:
+      city:
