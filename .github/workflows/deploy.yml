@@ -1,0 +1,16 @@
+name: Deploy
+
+on:
+  workflow_dispatch:
+  workflow_run:
+    branches: [master]
+    workflows: ["Update data"]
+    types: [completed]
+
+jobs:
+  deploy:
+    uses: EqualStreetNames/equalstreetnames/.github/workflows/reusable-deploy.yml@master
+    secrets: inherit
+    with:
+      country:
+      city:
