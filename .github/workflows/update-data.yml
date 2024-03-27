@@ -1,7 +1,6 @@
 name: Update data
 
 on:
-  # Run every month on the 1st at 1:00 UTC
   schedule:
     - cron: 
   workflow_dispatch:
