@@ -77,7 +77,7 @@ If you want to replicate the EqualStreetNames project in your city, here is the 
 
 ## Integrate your city to the project
 
-1. Let us know you're ready to add a new city to the project by [opening a new issue](https://github.com/EqualStreetNames/equalstreetnames/issues).
+1. Let us know you're ready to add a new city to the project by [opening a new discussion](https://github.com/orgs/EqualStreetNames/discussions/new?category=new-city).
 
 1. You have 2 options:
 
