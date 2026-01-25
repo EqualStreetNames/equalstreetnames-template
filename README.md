@@ -67,14 +67,6 @@ If you want to replicate the EqualStreetNames project in your city, here is the 
     + <a class="navbar-brand" href="#">EqualStreetNames.Brussels</a>
     ```
 
-1. Optionally you can change the style using `data-style` attribute, it can be a Mapbox pre-defined style (see [API Reference](https://docs.mapbox.com/mapbox-gl-js/api/#map)) or your custom style (see [Style Specification](https://docs.mapbox.com/mapbox-gl-js/style-spec/)).
-
-    ```diff
-    - <div id="map"></div>;
-    + <div id="map" data-style="mapbox://styles/mapbox/dark-v10"></div>;
-    ```
-
-
 ## Integrate your city to the project
 
 1. Let us know you're ready to add a new city to the project by [opening a new discussion](https://github.com/orgs/EqualStreetNames/discussions/new?category=new-city).
@@ -86,8 +78,6 @@ If you want to replicate the EqualStreetNames project in your city, here is the 
        If you choose to do so, you stay of course "owner" of the repository, we'll create a team for you (and anyone you want) that will have admin rights on your repository.  
        We'll help you maintain and manage your repository.  
        We'll also setup an automated data update (once a month) and automated deployment of the website (if you need it). If you want more regular updates, you will need to create an `ACCESS_TOKEN` in your repository secrets with your [GitHub access token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token).
-
-       For the automated deployment, you will need to create a `MAPBOX_TOKEN` in your repository secrets (see [Mapbox documentation](https://docs.mapbox.com/help/how-mapbox-works/access-tokens/)).
 
     1. Keep the ownership of your repository.
 
@@ -119,12 +109,6 @@ If you want to replicate the EqualStreetNames project in your city, here is the 
         ```diff
         + "build:my-country:my-city": "node build.js -c my-country/my-city"
         ```
-
-    1. Create a [Mapbox token](https://docs.mapbox.com/help/how-mapbox-works/access-tokens/)
-
-    1. Create a file named `.env` in the `website` directory of the project
-
-    1. Add the following line to the `.env` file: `MAPBOX_TOKEN=[your Mapbox token]` replacing `[your Mapbox token]` with the token you created
 
     1. Install JavaScript dependencies and run it (in the `website` folder of the main repository)
 
