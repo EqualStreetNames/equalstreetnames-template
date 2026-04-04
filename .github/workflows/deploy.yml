@@ -7,13 +7,12 @@ on:
     workflows: ["Update data"]
     types: [completed]
 
-permissions:
-  pages: write
-  id-token: write
-
 jobs:
   deploy:
     uses: EqualStreetNames/equalstreetnames/.github/workflows/reusable-deploy.yml@master
+    permissions:
+      pages: write
+      id-token: write
     secrets: inherit
     with:
       country:
